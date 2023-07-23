@@ -25,7 +25,7 @@ html {
   font-family: var(--font-family);
   font-size: var(--font-size);
   height: 100vh;
-  width: 100vw;
+  width: calc(100vw - (100vw - 100%));
 }
 
 body {
@@ -54,6 +54,8 @@ main {
   display: flex;
   flex-direction: column;
   height: max-content;
+  width: 350px;
+  max-width: 85vw;
 }
 
 .wrap {
@@ -147,14 +149,14 @@ main {
   margin-bottom: .5rem;
 }
 
-@media (width >= 768px) {
+@media (width >= 500px) {
   body::before {
     background: url(images/pattern-background-desktop.svg) no-repeat center top / cover;
     height: 50%;
   }
 
   .banner {
-    height: 15rem;
+    max-height: 12rem;
   }
 
   .title {
@@ -187,15 +189,15 @@ main {
 
   .link {
     font-size: 1rem;
-  }
+  }x
 
   .confirm {
     font-size: 1rem;
+    font-size: var(--font-weight-bold);
     padding: 1rem 1.5rem;
   }
 
   .cancel {
-    font-size: 1rem;
     margin-top: .3rem;
   }
 }
