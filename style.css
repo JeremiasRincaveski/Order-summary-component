@@ -1,45 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
 :root {
-  --pale-blue: hsl(225, 100%, 94%);
+  --border-radius: 10px;
   --bright-blue: hsl(245, 75%, 52%);
-  --very-pale-blue: hsl(225, 100%, 98%);
-  --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
+  --desaturated-blue: hsl(224, 23%, 55%);
   --font-family: 'Red Hat Display', sans-serif;
-  --font-weight-normal: 500;
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
   --font-size: 16px;
-
+  --font-weight-black: 900;
+  --font-weight-bold: 700;
+  --font-weight-normal: 500;
+  --pale-blue: hsl(225, 100%, 94%);
+  --very-pale-blue: hsl(225, 100%, 98%);
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
-  font-size: var(--font-size);
-  font-family: var(--font-family);
-  width: 100vw;
-  height: 100vh;
   background: var(--pale-blue);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
-  width: 100%;
-  height: 100%;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100%;
+  place-content: center;
+  width: 100%;
 }
 
 main {
-  width: 350px;
-  height: 100%;
+  align-items: center;
+  background: white;
+  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
+  height: max-content;
+}
+
+.wrap {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0 1.3rem;
+  width: 100%;
+}
+
+.banner {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  height: 10rem;
+  width: 100%;
+}
+
+.title {
+  color: var(--dark-blue);
+  font-size: 1.4rem;
+  font-weight: var(--font-weight-black);
+}
+
+.description {
+  color: var(--desaturated-blue);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-normal);
+  text-align: center;
+  width: 25ch;
+}
+
+.anualPlan {
+  align-items: center;
+  background: var(--very-pale-blue);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  margin: .5rem 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.logo {
+  height: 2rem;
+  width: 2rem;
+}
+
+.description__plan--title {
+  color: var(--dark-blue);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.description__plan--price {
+  color: var(--desaturated-blue);
+  font-weight: var(--font-weight-normal);
+  font-family: unset;
+  font-size: .7rem;
+}
+
+.link {
+  color: var(--bright-blue);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+  text-underline-offset: 1px;
+  margin-left: auto;
+}
+
+.confirm {
+  background: var(--bright-blue);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
+  border: none;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+  padding: .8rem 1rem;
+  width: 100%;
+}
+
+.cancel {
+  background: transparent;
+  border: none;
+  color: var(--desaturated-blue);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-black);
+  margin-bottom: .5rem;
 }
