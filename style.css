@@ -146,3 +146,56 @@ main {
   font-weight: var(--font-weight-black);
   margin-bottom: .5rem;
 }
+
+@media (width >= 768px) {
+  body::before {
+    background: url(images/pattern-background-desktop.svg) no-repeat center top / cover;
+    height: 50%;
+  }
+
+  .banner {
+    height: 15rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-top: .5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    width: 30ch;
+  }
+
+  .anualPlan {
+    margin: 1rem 2rem;
+    padding: 1.5rem;
+  }
+
+  .logo {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .description__plan--title {
+    font-size: 1rem;
+  }
+
+  .description__plan--price {
+    font-size: .8rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+
+  .confirm {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .cancel {
+    font-size: 1rem;
+    margin-top: .3rem;
+  }
+}
